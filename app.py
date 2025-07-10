@@ -17,7 +17,7 @@ if st.button("🚀 Generate Test Cases"):
             try:
                 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                 response = client.chat.completions.create(
-                    model="gpt-4",
+                    model="gpt-3.5-turbo",
                     messages=[{"role": "user", "content": f"Generate test cases for the following feature:\n{prompt}"}],
                     temperature=0.7,
                     max_tokens=500
